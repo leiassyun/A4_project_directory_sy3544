@@ -4,7 +4,7 @@ A foray into the world of open data, using Java programming. The [NYC Open Data]
 
 ## Data source
 
-We will analyze and visualize NYC Open Data's [Bi-Annual Pedestrian Counts](https://data.cityofnewyork.us/Transportation/Bi-Annual-Pedestrian-Counts/2de2-6x2h). While the data is published in a variety of formats, we will use the `CSV` version of the data.
+We analyze and visualize NYC Open Data's [Bi-Annual Pedestrian Counts](https://data.cityofnewyork.us/Transportation/Bi-Annual-Pedestrian-Counts/2de2-6x2h). While the data is published in a variety of formats, we will use the `CSV` version of the data.
 
 This particular data set represents counts of pedestrians at 114 different locations within New York City, taken twice-yearly since 2007. Each twice-yearly count includes data from one weekday (both the morning and in evening, counted separately) and on one weekend day (at around mid-day).
 
@@ -138,18 +138,3 @@ The following screenshots show the first 4 visualizations, completed - yours nee
    ![Difference between May 2021 Evening and Morning Pedestrian Counts](./images/screenshot_may2021eveningvsmorning.png)
 4. Difference Between May 2021 and May 2019 Pedestrian Counts:
    ![Difference Between May 2021 and May 2019 Pedestrian Counts](./images/screenshot_may2021vsmay2019.png)
-
-## Folder structure
-
-This project has several important directories:
-
-- `data` - data files reside in this directory
-- `src` - contains the Java source code for the project (i.e. `.java` files)
-- `bin` - contains the compiled code (i.e. `.class` files)
-- `lib` - contains any dependencies (other libraries of code that the project depends upon to work)
-
-If your project has no dependencies and has not been compiled, you may not see the `lib` or `bin` directories.
-
-## How to submit this assignment
-
-Submit on Brightspace a zip file named "A4_complete_NYUnetID" containing your project folder called "A4_project_directory_NYUnetID", where NYUnetID should be replaced with your actual NYU net ID. The project folder should contain your source code and compiled code within the src and bin folders. It should also contain the same test folder as was when you download the assignment 4 zip file.
