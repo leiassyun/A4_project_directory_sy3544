@@ -33,57 +33,6 @@ According to [the description of the metadata](http://www.nyc.gov/html/dot/downl
 - **(Month)(Year)\_PM** – weekday evening count, in the month/year indicated
 - **(Month)(Year)\_MD** – weekend count, in the month/year indicated
 
-## Internal representation of data:
-
-- When your program pulls the data from the text file, convert it into a two-dimensional array in code.
-- The length of the array cannot be hard-coded, but must be programmatically sized to fit the data.
-
-To extract the data from the text file and place it into the correct data format, your code must complete and make use of the following methods. Instructions for each are included as comments in the code.
-
-- `getLinesFromFile` - this method accepts a file path as an argument and must return a String array holding all lines in that file with their line breaks removed.
-- `getDataFromLines` - this method accepts a String array of lines from a file and returns a two-dimensional String array that has split up each line into its own sub-array of values.
-
-## Analysis and visualization
-
-You will write code to perform `6` different analyses of the data and map the results. Details are left as comments :
-
-1. the pedestrian counts at all locations in the morning in May 2021. Complete the `showMay2021MorningCounts` method for this.
-1. the pedestrian counts at all locations in the evening in May 2021. Complete the `showMay2021EveningCounts` method for this.
-1. the difference between the pedestrian counts in the evening compared to the morning in May 2021. Complete the `showMay2021EveningMorningCountsDifference` method for this.
-1. the difference between the average of the morning/evening pedestrian counts in May 2021 compared to the average of the morning/evening pedestrian counts in May 2019. Complete the `showMay2021VersusMay2019Counts` method for this.
-1. another more analyses of your choosing. Complete the `customVisualization1` method for this.
-1. another more analyses of your choosing. Complete the `customVisualization1` method for this.
-
-In all cases, if data required by the analysis is missing for any given location in the original data set, a marker should not be placed at that location on the map.
-
-An example of how to specify a location that the map can understand:
-
-```java
-// create a Location in the center of Berlin, Germany
-float lat = 52.5f;
-float lng = 13.4f;
-Location location = new Location(lat, lng);
-```
-
-Example of how to place a bubble marker at a specific location:
-
-```java
-// place a bubble marker on the map, with a given radius and color
-float radius = 300;
-float[] fillColor = {0, 0, 255, 127}; // a color, specified as a combinatino of red, green, blue, and alpha (i.e. transparency), each represented as numbers between 0 and 255.
-MarkerBubble marker = new MarkerBubble(this, location, radius, fillColor); // don't worry about the `this` keyword for now... just make sure it's there.
-map.addMarker(marker); // add marker to the map, assuming the map variable has been declared earlier.
-```
-
-Example of how to place an image marker at a specific location:
-
-```java
-// place an image marker on the map, with a given image file
-float radius = 300;
-String filepath = "images/marker_blue.png"; // windows users should use backslashes \ instead of forward slash / in all file paths
-MarkerBubble marker = new MarkerImage(this, location, filepath); // don't worry about the `this` keyword for now... just make sure it's there.
-map.addMarker(marker); // add marker to the map, assuming the map variable has been declared earlier.
-```
 
 ## Interactivity
 
@@ -124,11 +73,10 @@ However, Processing currently works only with Java 8. In order to have the Java 
 1. In the `Configure Java Runtime` setting document, click the icon to edit the current runtime setting for this project and change it to the newly-installed JDK.
 1. In the Command Palette again (`View`->`Command Palette`), search for "`Java: Clean Language Server Workspace`". Click the matching option that appears and confirm that you would like to reset the Java language server.
 
-At this point, the project should run properly. Try it out.
 
-## Solutions
+## Sample visualizations
 
-The following screenshots show the first 4 visualizations, completed - yours need not be identical, but should be very similar:
+The following screenshots show the first 4 visualizations:
 
 1. May 2021 Morning Pedestrian Counts:
    ![May 2021 Morning Pedestrian Counts](./images/screenshot_may2021morning.png)
