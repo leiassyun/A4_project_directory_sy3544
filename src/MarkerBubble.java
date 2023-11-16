@@ -1,16 +1,12 @@
 
 import processing.core.PApplet;
-// used by marker
 import processing.core.PConstants;
 import processing.core.PGraphics;
 // import processing.core.PImage;
 import de.fhpotsdam.unfolding.marker.AbstractMarker;
 import de.fhpotsdam.unfolding.geo.Location;
 
-/**
- * This marker displays a circular bubble at its location on the map.
- * DO NOT TOUCH THIS FILE!
- */
+
 public class MarkerBubble extends AbstractMarker {
     App app;
     float width;
@@ -47,4 +43,4 @@ public class MarkerBubble extends AbstractMarker {
         return checkX > x && checkX < x + this.width && checkY > y && checkY < y + this.height;
     }
 
-} // MarkerBubble
+} 
