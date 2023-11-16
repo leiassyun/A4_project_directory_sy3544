@@ -1,4 +1,3 @@
-package edu.nyu.cs;
 
 import processing.core.PApplet;
 // used by marker

@@ -1,5 +1,3 @@
-package edu.nyu.cs;
-
 // some basic java imports
 import java.io.File;
 import java.nio.file.Paths;
